@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Animated Circle Logo</title>
+</head>
+<body>
+    <div class="circle">
+        <div class="logo">
+            <div class="text">
+                <p>Swesh - Creative Animated Logo - Design</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const text = document.querySelector('.text p');
+        text.innerHTML = text.innerText.split("").map(
+            (char,i)=>
+            `<span style="transform:rotate(${i*8.2}deg)">${char}</span>`
+        ).join("")
+    </script>
+</body>
+</html>
